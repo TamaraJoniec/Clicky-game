@@ -7,6 +7,7 @@ import { useState } from 'react';
 function Card({image, id, onClick}) {
   return (
     <div className="col-sm-6 col-md-4 col-lg-3 mb-4">
+      {/* an onClick event handler to each Card component */}
       <div className="card" onClick={() => onClick(id)}>
         <img className="card-img-top" src={image} alt="" />
         <div className="card-body">
@@ -32,7 +33,21 @@ function App() {
     { id: 12, image: 'https://images.pexels.com/photos/802112/pexels-photo-802112.jpeg?auto=compress&cs=tinysrgb&w=400' }
   ]);
 
+
+  const [score, setScore] = useState(0);
+  const [clickedCards, setClickedCards] = useState([]);
+
   function handleCardClick(id) {
+    // Check if the card has already been clicked
+    if (clickedCards.includes(id)) {
+      // Reset the score and clickedCards array
+      setScore(0);
+      setClickedCards([]);
+    } else {
+      // Increment the score and add the card to the clickedCards array
+      setScore(score + 1);
+      setClickedCards([...clickedCards, id]);
+    }
     const shuffledCards = shuffleArray(cards);
     setCards(shuffledCards);
   }
@@ -52,6 +67,7 @@ function App() {
       <h1 className="text-center mb-4">Memory Game</h1>
       <div className="row">
         {cards.map((card, index) => (
+          // call the handleCardClick function with the card's id as a parameter
           <Card key={index} image={card.image} id={card.id} onClick={handleCardClick} />
         ))}
       </div>
