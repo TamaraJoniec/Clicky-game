@@ -6,7 +6,7 @@ For this activity, I will create a memory game with React. This activity will re
 
 ### Instructions
 
-1. Check out the [screenshot](https://clicky-game.netlify.com/)
+1. Check out the [demo](https://clicky-game.netlify.com/)
 
 2. The application renders different images (of my choice) to the screen. Each image listens for click events.
 
