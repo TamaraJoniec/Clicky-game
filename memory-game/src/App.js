@@ -32,7 +32,15 @@ function App() {
   ];
 
   return (
-   
+    <div className="container">
+      <h1 className="text-center mb-4">Memory Game</h1>
+      <div className="row">
+        {/* Map over each card and create a Card component with image and index as props*/}
+        {cards.map((card, index) => (
+          <Card key={index} image={card.image} />
+        ))}
+      </div>
+    </div>
   );
 }
 
