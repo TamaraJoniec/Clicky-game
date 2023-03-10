@@ -1,17 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import { useState } from 'react';
+import Navbar from './Navbar.js';
 
 // create function that returns a card component 
 function Card({ image, id, onClick }) {
   return (
-    <div className="col-sm-6 col-md-4 col-lg-3 mb-4">
+    <div className="col-sm-6 col-md-3 col-lg-3 mb-4">
       {/* an onClick event handler to each Card component */}
       <div className="card" onClick={() => onClick(id)}>
-        <img className="card-img-top" src={image} alt="" />
-        <div className="card-body">
-        </div>
+        <img className="card-img" src={image} alt="" />
       </div>
     </div>
   );
@@ -36,7 +34,14 @@ function App() {
 
   const [score, setScore] = useState(0);
   const [clickedCards, setClickedCards] = useState([]);
+  const [topScore, setTopScore] = useState(0);
 
+  const handleScore = (newScore) => {
+    setScore(newScore);
+    if (newScore > topScore) {
+      setTopScore(newScore);
+    }
+  };
   function handleCardClick(id) {
     // Check if the card has already been clicked
     if (clickedCards.includes(id)) {
@@ -63,7 +68,8 @@ function App() {
     return newArray;
   }
   return (
-    <div className="container">
+    <div className="container-fluid">
+    <Navbar score={score} topScore={topScore} />
       <h1 className="text-center mb-4">Memory Game</h1>
       <div className="row">
         <div className="col-sm-12 mb-4">
