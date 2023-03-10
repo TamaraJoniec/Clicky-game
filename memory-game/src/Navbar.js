@@ -5,9 +5,9 @@ function Navbar({ score, topScore }) {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <h1 className="title">
           Memory Game
-        </a>
+        </h1>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
