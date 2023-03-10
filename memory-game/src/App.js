@@ -4,7 +4,7 @@ import React from 'react';
 import { useState } from 'react';
 
 // create function that returns a card component 
-function Card({image, id, onClick}) {
+function Card({ image, id, onClick }) {
   return (
     <div className="col-sm-6 col-md-4 col-lg-3 mb-4">
       {/* an onClick event handler to each Card component */}
@@ -66,6 +66,9 @@ function App() {
     <div className="container">
       <h1 className="text-center mb-4">Memory Game</h1>
       <div className="row">
+        <div className="col-sm-12 mb-4">
+          <h3>Score: {score}</h3>
+        </div>
         {cards.map((card, index) => (
           // call the handleCardClick function with the card's id as a parameter
           <Card key={index} image={card.image} id={card.id} onClick={handleCardClick} />
