@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import { useState } from 'react';
-import Navbar from './Navbar.js';
+import Navbar from './Navbar';
 
 // create function that returns a card component 
 function Card({ image, id, onClick }) {
@@ -31,17 +31,9 @@ function App() {
     { id: 12, image: 'https://images.pexels.com/photos/802112/pexels-photo-802112.jpeg?auto=compress&cs=tinysrgb&w=400' }
   ]);
 
-
   const [score, setScore] = useState(0);
   const [clickedCards, setClickedCards] = useState([]);
-  const [topScore, setTopScore] = useState(0);
 
-  const handleScore = (newScore) => {
-    setScore(newScore);
-    if (newScore > topScore) {
-      setTopScore(newScore);
-    }
-  };
   function handleCardClick(id) {
     // Check if the card has already been clicked
     if (clickedCards.includes(id)) {
@@ -68,19 +60,17 @@ function App() {
     return newArray;
   }
   return (
-    <div className="container-fluid">
-    <Navbar score={score} topScore={topScore} />
-      <h1 className="text-center mb-4">Memory Game</h1>
-      <div className="row">
-        <div className="col-sm-12 mb-4">
-          <h3>Score: {score}</h3>
-        </div>
-        {cards.map((card, index) => (
-          // call the handleCardClick function with the card's id as a parameter
-          <Card key={index} image={card.image} id={card.id} onClick={handleCardClick} />
-        ))}
+<div className="container-fluid">
+  <Navbar score={score} />
+  <div className="row">
+    {cards.map((card, index) => (
+      <div key={index} className="col-sm-3">
+        <Card image={card.image} id={card.id} onClick={handleCardClick} />
       </div>
-    </div>
+    ))}
+  </div>
+</div>
+
   );
 }
 

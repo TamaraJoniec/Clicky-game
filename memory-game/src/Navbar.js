@@ -1,27 +1,25 @@
-import React from 'react';
-import './Navbar.css';
+import React from "react";
 
-const Navbar = ({ score, topScore }) => {
+function Navbar({ score, topScore }) {
   return (
-    <nav className="navbar navbar-expand-lg">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
-          <img src="/logo.svg" alt="Logo" />
-          <h1>Memory Game</h1>
+        <a className="navbar-brand" href="#">
+          Memory Game
         </a>
-        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul className="navbar-nav align-items-center">
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <p className="score">Score: {score}</p>
-            </li>
-            <li className="nav-item">
-              <p className="score">Top Score: {topScore}</p>
+              <h5 className="nav-link">
+                Score: <span className="badge bg-primary">{score}</span>
+              </h5>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   );
-};
+}
 
 export default Navbar;
+
