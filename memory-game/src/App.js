@@ -16,9 +16,26 @@ function Card({image}) {
 }
 
 function App() {
-  return (
+  const cards = [
+    { image: 'https://cuteanimals.net/wp-content/uploads/2022/01/baby-panda.jpg' },
+    { image: 'https://cuteanimals.net/wp-content/uploads/2022/01/baby-kitten.jpg' },
+    { image: 'https://cuteanimals.net/wp-content/uploads/2022/01/baby-puppy.jpg' },
+    { image: 'https://cuteanimals.net/wp-content/uploads/2022/01/baby-rabbit.jpg' },
+    { image: 'https://cuteanimals.net/wp-content/uploads/2022/01/baby-duck.jpg' },
+    { image: 'https://cuteanimals.net/wp-content/uploads/2022/01/baby-elephant.jpg' },
+    { image: 'https://cuteanimals.net/wp-content/uploads/2022/01/baby-kangaroo.jpg' },
+    { image: 'https://cuteanimals.net/wp-content/uploads/2022/01/baby-otter.jpg' },
+    { image: 'https://cuteanimals.net/wp-content/uploads/2022/01/baby-seal.jpg' },
+    { image: 'https://cuteanimals.net/wp-content/uploads/2022/01/baby-sloth.jpg' },
+    { image: 'https://cuteanimals.net/wp-content/uploads/2022/01/baby-tiger.jpg' },
+    { image: 'https://cuteanimals.net/wp-content/uploads/2022/01/baby-zebra.jpg' },
+  ];
 
-  )
+  return (
+   
+  );
 }
+
+
 
 export default App;
