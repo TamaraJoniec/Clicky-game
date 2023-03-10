@@ -4,10 +4,10 @@ import React from 'react';
 import { useState } from 'react';
 
 // create function that returns a card component 
-function Card({image}) {
+function Card({image, id, onClick}) {
   return (
     <div className="col-sm-6 col-md-4 col-lg-3 mb-4">
-      <div className="card">
+      <div className="card" onClick={() => onClick(id)}>
         <img className="card-img-top" src={image} alt="" />
         <div className="card-body">
         </div>
@@ -51,9 +51,8 @@ function App() {
     <div className="container">
       <h1 className="text-center mb-4">Memory Game</h1>
       <div className="row">
-        {/* Map over each card and create a Card component with image and index as props*/}
         {cards.map((card, index) => (
-          <Card key={index} image={card.image} />
+          <Card key={index} image={card.image} id={card.id} onClick={handleCardClick} />
         ))}
       </div>
     </div>
