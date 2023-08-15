@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Clicky Game with React & Netlify
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##Overview
 
-## Available Scripts
+Clicky Game is a memory-challenging game built with React. The primary aim of the game is to test and enhance your memory. Click on an image to earn points, but be careful not to click on any image more than once!
 
-In the project directory, you can run:
+This game showcases the ability to break down an application's UI into components, manage component state, and respond to user events. It's hosted and deployed on Netlify for seamless user experience.
 
-### `npm start`
+##Live Demo
+Experience the game firsthand! Try out the live demo [here](https://clicky-game.netlify.com/).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+##Gameplay Instructions
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+###Click to Start: 
+Start the game by clicking on any image.
+###Earn Points: 
+Every unique image you click earns you a point. Aim for the highest score by remembering which images you've already clicked.
+###Avoid Repeats: 
+If you click the same image more than once, your score resets to 0, and the game restarts.
+###Image Shuffle: 
+After every click, the images shuffle to different positions, increasing the challenge.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##Features
+###Dynamic UI: 
+The user interface is built using React components, offering smooth interactivity.
+###State Management: 
+The game efficiently manages component state to track scores and clicked images.
+###Responsive Design: 
+The game layout is responsive, ensuring a consistent experience across devices.
+###Random Shuffle: 
+Uses a randomized algorithm to shuffle images after each click, ensuring no two game rounds are the same.
