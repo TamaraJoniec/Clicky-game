@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import Navbar from './Navbar';
 import './styles.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // create function that returns a card component 
 function Card({ image, id, onClick }) {
