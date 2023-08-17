@@ -3,7 +3,25 @@ import { useState } from 'react';
 import Navbar from './Navbar';
 import './styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import reportWebVitals from './reportWebVitals';
 
+function App() {
+  return (
+    <Router>
+      <div>
+        <Navbar />
+        {/* Wrap Route elements in a Routes component */}
+        <Routes basename="/memory-game/">
+          {/* Define routes using the Route component to render different page components at different paths */}
+          {/* Define a default route that will render the Home component */}
+          <Route path="/memory-game/" element={<App/>} />
+          <Route path="/memory-game/banner" element={<Banner/>} />
+          {/* Define a route that will have descendant routes */}
+        </Routes>
+      </div>
+    </Router>
+  );
+}
 // create function that returns a card component 
 function Card({ image, id, onClick }) {
   return (
