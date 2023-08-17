@@ -30,4 +30,8 @@ The game layout is responsive, ensuring a consistent experience across devices.
 ###Random Shuffle: 
 Uses a randomized algorithm to shuffle images after each click, ensuring no two game rounds are the same.
 
+### Design
 
+* Mobile-first
+
+![Screenshot of website](src/Screenshot.png)
